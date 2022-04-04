@@ -64,22 +64,22 @@ def new_pizza_top(personal_info, toppings):
     for t in toppings:
         personal_info['toppings'].append(t)
     personal_info['toppings'].sort()
-    pass
+    
 
 def sentence_structure_one(personal_info):
     output_one = "Hey, my name is " + str(personal_info['name']) + ", and my Student ID is " + str(personal_info['student_id'])
     print(output_one, end = ". \n")
-    return
+    
 
 
 def sentence_structure_two(personal_info):
     output_two = "My ideal pizza contains  "
     
-    for i in enumerate(personal_info):
-        if i < len(personal_info['toppings']) -1:
-            output_two += personal_info['toppings'] + ', '
+    for i,t in enumerate(personal_info['toppings']):
+        if i < len(personal_info['toppings']) - 1:
+            output_two += str(t) + ', '
         else:
-            output_two +="and " + personal_info['toppings'] + '.'
+            output_two +="and " + str(t) + '.'
     print(output_two)
 
 def sentence_structure_three(personal_info):
